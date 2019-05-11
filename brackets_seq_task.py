@@ -1,5 +1,4 @@
-
-
+# brackets sequence task -- solution with stack        
 def is_correct_brackets_sequence(br_sequence):
     stack = []
     for s in br_sequence:
@@ -12,8 +11,7 @@ def is_correct_brackets_sequence(br_sequence):
                 stack.pop()
             else:
                 stack.append(s)
-    res = True if not stack else False
-    return res
+    return True if not stack else False
 
 
 bracket_seq_incorrect = "[(({)}){}]"
