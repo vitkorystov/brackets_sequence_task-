@@ -5,13 +5,11 @@ def is_correct_brackets_sequence(br_sequence):
         if not stack:
             stack.append(s)
         else:
-            if (stack[-1] == '(' and s == ')') \
-                    or (stack[-1] == '{' and s == '}') \
-                    or (stack[-1] == '[' and s == ']'):
+            if (stack[-1] == '(' and s == ')') or (stack[-1] == '{' and s == '}') or (stack[-1] == '[' and s == ']'):
                 stack.pop()
             else:
                 stack.append(s)
-    return True if not stack else False
+    return False if stack else True
 
 
 bracket_seq_incorrect = "[(({)}){}]"
